@@ -1,12 +1,14 @@
+# Import libraries
 from PIL import Image, ImageDraw, ImageFont
 import math
 
+# Setting up a character databse based on the pixel brightness and intensity
 chars = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,\"^`'. "[::-1]
-# chars = "#Wo- "[::-1]
 charArray = list(chars)
 charLength = len(charArray)
 interval = charLength/256
 
+# Setting up scale and character attributes
 scaleFactor = 0.2
 
 oneCharWidth = 10
@@ -24,6 +26,7 @@ im = im.resize((int(scaleFactor*width), int(scaleFactor*height*(oneCharWidth/one
 width, height = im.size
 pix = im.load()
 
+# Calculating height/width ratio to check whether the output image matches it
 print(height/width)
 
 outputImage = Image.new('RGB', (oneCharWidth * width, oneCharHeight * height), color = (0, 0, 0))
@@ -32,6 +35,7 @@ d = ImageDraw.Draw(outputImage)
 twidth, theight = outputImage.size
 print(theight/twidth)
 
+# Converting the image into greyscale first, then turning it back into RGB
 for i in range(height):
     for j in range(width):
         r, g, b = pix[j, i]
