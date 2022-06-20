@@ -1,7 +1,7 @@
 # ASCIIfy
 
 ASCII(American Standard Code for Information Interchange) is a common encoding format used for representing strings and text data in computers.
-I have used ASCII Characters' strings to draw an image by making a character map of ASCII characters in an increasing order of their brightness. I also added colors to the ASCII characters and then saved the output.
+I have used ASCII Characters' strings to draw an image by making a character map of ASCII characters in an increasing order of their brightness. I also added colors to the ASCII characters and then saved the output. Tried to work with different kinds of image formats like jpeg and webp.
 
 Libraries used - Pillow, Math.
 
