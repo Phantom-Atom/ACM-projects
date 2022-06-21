@@ -15,7 +15,7 @@ Example -
 
 # Pencil Sketch Generator
 
-I created a Pencil Sketch of an image using Opencv by first I converting the image into greyscale and then inverting it.
+I created a Pencil Sketch of an image using Opencv by first converting the image into greyscale and then inverting it.
 Then I applied a Gaussian Blur to the image and obtained the sketch by performing Bitwise division between the inverted Blurred image and the Grayscale image. Finally, I saved the created Sketch.
 
 Libraries used - OpenCV, Matplotlib.
